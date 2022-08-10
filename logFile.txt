@@ -1,0 +1,56 @@
+Sat Sep 11 10:49:16 2021 ERROR Automobile.cpp:drive:48 The black 2016 Cadillac Escalade has no gas left in the tank
+
+Sat Sep 11 10:49:18 2021 ERROR Automobile.cpp:drive:48 The black 2016 Cadillac Escalade has no gas left in the tank
+
+Sat Sep 11 10:49:19 2021 ERROR Automobile.cpp:drive:48 The blue 2008 Chevrolet Impala has no gas left in the tank
+
+Sat Sep 11 10:49:19 2021 ERROR Automobile.cpp:drive:48 The black 2016 Cadillac Escalade has no gas left in the tank
+
+Sat Sep 11 10:49:21 2021 ERROR Automobile.cpp:drive:48 The black 2016 Cadillac Escalade has no gas left in the tank
+
+Sat Sep 11 10:49:23 2021 ERROR Automobile.cpp:drive:48 The black 2016 Cadillac Escalade has no gas left in the tank
+
+Sat Sep 11 10:49:24 2021 ERROR Automobile.cpp:drive:48 The blue 2008 Chevrolet Impala has no gas left in the tank
+
+Sat Sep 11 10:49:24 2021 ERROR Automobile.cpp:drive:48 The black 2016 Cadillac Escalade has no gas left in the tank
+
+Sat Sep 11 10:49:26 2021 ERROR Automobile.cpp:drive:48 The black 2016 Cadillac Escalade has no gas left in the tank
+
+Sat Sep 11 10:49:26 2021 WARNING Automobile.cpp:addFuel:34 The grey 2013 Toyota Corolla is full of gas. Discarding the rest...
+
+Sat Sep 11 10:49:26 2021 WARNING Automobile.cpp:addFuel:34 The red 2012 Honda Civic is full of gas. Discarding the rest...
+
+Sat Sep 11 10:49:26 2021 WARNING Automobile.cpp:addFuel:34 The blue 2008 Chevrolet Impala is full of gas. Discarding the rest...
+
+Sat Sep 11 10:49:27 2021 WARNING Automobile.cpp:addFuel:34 The grey 2013 Toyota Corolla is full of gas. Discarding the rest...
+
+Sat Sep 11 10:49:27 2021 WARNING Automobile.cpp:addFuel:34 The red 2012 Honda Civic is full of gas. Discarding the rest...
+
+Sat Sep 11 10:49:27 2021 WARNING Automobile.cpp:addFuel:34 The blue 2008 Chevrolet Impala is full of gas. Discarding the rest...
+
+Sat Sep 11 10:49:27 2021 WARNING Automobile.cpp:addFuel:34 The black 2016 Cadillac Escalade is full of gas. Discarding the rest...
+
+Sat Sep 11 10:49:28 2021 ERROR Automobile.cpp:drive:48 The black 2016 Cadillac Escalade has no gas left in the tank
+
+Sat Sep 11 10:49:28 2021 WARNING Automobile.cpp:addFuel:34 The grey 2013 Toyota Corolla is full of gas. Discarding the rest...
+
+Sat Sep 11 10:49:28 2021 WARNING Automobile.cpp:addFuel:34 The red 2012 Honda Civic is full of gas. Discarding the rest...
+
+Sat Sep 11 10:49:28 2021 WARNING Automobile.cpp:addFuel:34 The blue 2008 Chevrolet Impala is full of gas. Discarding the rest...
+
+Sat Sep 11 10:49:29 2021 ERROR Automobile.cpp:drive:48 The blue 2008 Chevrolet Impala has no gas left in the tank
+
+Sat Sep 11 10:49:29 2021 ERROR Automobile.cpp:drive:48 The black 2016 Cadillac Escalade has no gas left in the tank
+
+Sat Sep 11 10:49:29 2021 WARNING Automobile.cpp:addFuel:34 The grey 2013 Toyota Corolla is full of gas. Discarding the rest...
+
+Sat Sep 11 10:49:29 2021 WARNING Automobile.cpp:addFuel:34 The red 2012 Honda Civic is full of gas. Discarding the rest...
+
+Sat Sep 11 10:49:30 2021 WARNING Automobile.cpp:addFuel:34 The grey 2013 Toyota Corolla is full of gas. Discarding the rest...
+
+Sat Sep 11 10:49:30 2021 WARNING Automobile.cpp:addFuel:34 The red 2012 Honda Civic is full of gas. Discarding the rest...
+
+Sat Sep 11 10:49:30 2021 WARNING Automobile.cpp:addFuel:34 The blue 2008 Chevrolet Impala is full of gas. Discarding the rest...
+
+Sat Sep 11 10:49:30 2021 WARNING Automobile.cpp:addFuel:34 The black 2016 Cadillac Escalade is full of gas. Discarding the rest...
+
