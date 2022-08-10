@@ -2,30 +2,31 @@
 
 #include "Logger.h"
 
+#include <arpa/inet.h>
 #include <iostream>
-#include <string>
 #include <mutex>
-#include <thread>
+#include <netinet/in.h>
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
-#include <arpa/inet.h>
-#include <netinet/in.h>
+#include <string>
 #include <sys/socket.h>
 #include <sys/types.h>
+#include <thread>
+#include <unistd.h>
 
-#define MAX_BUFFER_SIZE 256
+#define BUF_LEN 256
 
 // Global variables
-const int server_port = 4201;
 struct sockaddr_in server_addr;
+const int server_port = 4201;
 int sock_fd;
-char buffer[MAX_BUFFER_SIZE];
+char buffer[BUF_LEN];
 LOG_LEVEL global_log_level = ERROR;
 std::string server_ip = "127.0.0.1";
 socklen_t socket_len;
+int len;
 
 // Thread variables
 bool is_running = true;
@@ -34,6 +35,7 @@ std::mutex logger_mutex;
 // Thread functions declaration
 void run_receiver(int fd);
 
+// Logger.h function definitions
 int InitializeLog() {
   if ((sock_fd = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) < 0) {
     perror("ERROR: Unable to create socket");
@@ -50,9 +52,68 @@ int InitializeLog() {
   return 1;
 }
 
-void SetLogLevel(LOG_LEVEL level) {}
+void SetLogLevel(LOG_LEVEL level) { global_log_level = level; }
 
 void Log(LOG_LEVEL level, const char *prog, const char *func, int line,
-         const char *messaage) {}
+         const char *message) {
+  if (level > global_log_level) {
+    time_t now = time(0);
+    char *dt = ctime(&now);
+    memset(buffer, 0, BUF_LEN);
+    char levelStr[][16] = {"DEBUG", "WARNING", "ERROR", "CRITICAL"};
+    len = sprintf(buffer, "%s %s %s:%s:%d %s\n", dt, levelStr[level], prog,
+                  func, line, message) +
+          1;
+    buffer[len - 1] = '\0';
 
-void ExitLog() {}
+    sendto(sock_fd, buffer, len, 0, (struct sockaddr *)&server_addr,
+           socket_len);
+  }
+}
+
+void ExitLog() {
+  is_running = false;
+  close(sock_fd);
+}
+
+
+// Thread receiver function
+void run_receiver(int fd) {
+  // Set 1 second timeout for the socket
+  struct timeval read_timeout;
+  read_timeout.tv_sec = 0;
+  read_timeout.tv_usec = 1;
+  setsockopt(fd, SOL_SOCKET, SO_RCVTIMEO, &read_timeout, sizeof(read_timeout));
+
+  // Run receiver loop
+  while (is_running) {
+
+    memset(buffer, 0, BUF_LEN);
+
+    logger_mutex.lock();
+    int size = recvfrom(fd, buffer, BUF_LEN, 0, (struct sockaddr *)&server_addr,
+                        &socket_len);
+
+    std::string message = buffer;
+
+    if (size > 0) {
+      std::string log_level = message.substr((message.find("=") + 1));
+
+      if (log_level == "DEBUG") {
+        global_log_level = DEBUG;
+      } else if (log_level == "WARNING") {
+        global_log_level = WARNING;
+      } else if (log_level == "ERROR") {
+        global_log_level = ERROR;
+      } else if (log_level == "CRITICAL") {
+        global_log_level = CRITICAL;
+      } else {
+        continue;
+      }
+    } else {
+      sleep(1);
+    }
+    message = "";
+    logger_mutex.unlock();
+  }
+}
