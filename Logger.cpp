@@ -5,16 +5,15 @@
 #include <arpa/inet.h>
 #include <iostream>
 #include <mutex>
-#include <netinet/in.h>
-#include <pthread.h>
+#include <thread>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <string>
+#include <unistd.h>
+#include <netinet/in.h>
 #include <sys/socket.h>
 #include <sys/types.h>
-#include <thread>
-#include <unistd.h>
 
 #define BUF_LEN 256
 
@@ -62,8 +61,7 @@ void Log(LOG_LEVEL level, const char *prog, const char *func, int line,
     memset(buffer, 0, BUF_LEN);
     char levelStr[][16] = {"DEBUG", "WARNING", "ERROR", "CRITICAL"};
     len = sprintf(buffer, "%s %s %s:%s:%d %s\n", dt, levelStr[level], prog,
-                  func, line, message) +
-          1;
+                  func, line, message) + 1;
     buffer[len - 1] = '\0';
 
     sendto(sock_fd, buffer, len, 0, (struct sockaddr *)&server_addr,
@@ -87,13 +85,10 @@ void run_receiver(int fd) {
 
   // Run receiver loop
   while (is_running) {
-
     memset(buffer, 0, BUF_LEN);
-
     logger_mutex.lock();
     int size = recvfrom(fd, buffer, BUF_LEN, 0, (struct sockaddr *)&server_addr,
                         &socket_len);
-
     std::string message = buffer;
 
     if (size > 0) {
