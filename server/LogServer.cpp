@@ -3,6 +3,13 @@
 // 12-Mar-19  M. Watler         Created.
 //
 
+/*  ╭──────────────────────────────────╮
+ *  │ Name: Kian Dadkhah Shokrollahi   │
+ *  │ SID: 119369205                   │
+ *  │ UNX511 Assignment 2              │
+ *  ╰──────────────────────────────────╯
+ */
+
 #include <arpa/inet.h>
 #include <fcntl.h>
 #include <iostream>

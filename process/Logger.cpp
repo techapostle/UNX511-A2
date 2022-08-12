@@ -1,3 +1,10 @@
+/*  ╭──────────────────────────────────╮
+ *  │ Name: Kian Dadkhah Shokrollahi   │
+ *  │ SID: 119369205                   │
+ *  │ UNX511 Assignment 2              │
+ *  ╰──────────────────────────────────╯
+ */
+
 #include "Logger.h"
 
 #include <iostream>
