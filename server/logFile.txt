@@ -1,0 +1,120 @@
+Thu Aug 11 22:06:54 2022
+ WARNING Automobile.cpp:drive:48 The black 2016 Cadillac Escalade has no gas left in the tank
+
+Thu Aug 11 22:06:54 2022
+ DEBUG Automobile.cpp:addFuel:34 The grey 2013 Toyota Corolla is full of gas. Discarding the rest...
+
+Thu Aug 11 22:06:54 2022
+ DEBUG Automobile.cpp:addFuel:34 The red 2012 Honda Civic is full of gas. Discarding the rest...
+
+Thu Aug 11 22:06:54 2022
+ DEBUG Automobile.cpp:addFuel:34 The blue 2008 Chevrolet Impala is full of gas. Discarding the rest...
+
+Thu Aug 11 22:06:55 2022
+ WARNING Automobile.cpp:drive:48 The blue 2008 Chevrolet Impala has no gas left in the tank
+
+Thu Aug 11 22:06:55 2022
+ WARNING Automobile.cpp:drive:48 The black 2016 Cadillac Escalade has no gas left in the tank
+
+Thu Aug 11 22:06:55 2022
+ DEBUG Automobile.cpp:addFuel:34 The grey 2013 Toyota Corolla is full of gas. Discarding the rest...
+
+Thu Aug 11 22:06:55 2022
+ DEBUG Automobile.cpp:addFuel:34 The red 2012 Honda Civic is full of gas. Discarding the rest...
+
+Thu Aug 11 22:06:56 2022
+ DEBUG Automobile.cpp:addFuel:34 The grey 2013 Toyota Corolla is full of gas. Discarding the rest...
+
+Thu Aug 11 22:06:56 2022
+ DEBUG Automobile.cpp:addFuel:34 The red 2012 Honda Civic is full of gas. Discarding the rest...
+
+Thu Aug 11 22:06:56 2022
+ DEBUG Automobile.cpp:addFuel:34 The blue 2008 Chevrolet Impala is full of gas. Discarding the rest...
+
+Thu Aug 11 22:06:56 2022
+ DEBUG Automobile.cpp:addFuel:34 The black 2016 Cadillac Escalade is full of gas. Discarding the rest...
+
+Thu Aug 11 22:06:57 2022
+ WARNING Automobile.cpp:drive:48 The black 2016 Cadillac Escalade has no gas left in the tank
+
+Thu Aug 11 22:06:57 2022
+ DEBUG Automobile.cpp:addFuel:34 The grey 2013 Toyota Corolla is full of gas. Discarding the rest...
+
+Thu Aug 11 22:06:57 2022
+ DEBUG Automobile.cpp:addFuel:34 The red 2012 Honda Civic is full of gas. Discarding the rest...
+
+Thu Aug 11 22:06:57 2022
+ DEBUG Automobile.cpp:addFuel:34 The blue 2008 Chevrolet Impala is full of gas. Discarding the rest...
+
+Thu Aug 11 22:06:58 2022
+ WARNING Automobile.cpp:drive:48 The blue 2008 Chevrolet Impala has no gas left in the tank
+
+Thu Aug 11 22:06:58 2022
+ WARNING Automobile.cpp:drive:48 The black 2016 Cadillac Escalade has no gas left in the tank
+
+Thu Aug 11 22:06:58 2022
+ DEBUG Automobile.cpp:addFuel:34 The grey 2013 Toyota Corolla is full of gas. Discarding the rest...
+
+Thu Aug 11 22:06:58 2022
+ DEBUG Automobile.cpp:addFuel:34 The red 2012 Honda Civic is full of gas. Discarding the rest...
+
+Thu Aug 11 22:06:59 2022
+ DEBUG Automobile.cpp:addFuel:34 The grey 2013 Toyota Corolla is full of gas. Discarding the rest...
+
+Thu Aug 11 22:06:59 2022
+ DEBUG Automobile.cpp:addFuel:34 The red 2012 Honda Civic is full of gas. Discarding the rest...
+
+Thu Aug 11 22:06:59 2022
+ DEBUG Automobile.cpp:addFuel:34 The blue 2008 Chevrolet Impala is full of gas. Discarding the rest...
+
+Thu Aug 11 22:06:59 2022
+ DEBUG Automobile.cpp:addFuel:34 The black 2016 Cadillac Escalade is full of gas. Discarding the rest...
+
+Thu Aug 11 22:07:00 2022
+ WARNING Automobile.cpp:drive:48 The black 2016 Cadillac Escalade has no gas left in the tank
+
+Thu Aug 11 22:07:00 2022
+ DEBUG Automobile.cpp:addFuel:34 The grey 2013 Toyota Corolla is full of gas. Discarding the rest...
+
+Thu Aug 11 22:07:00 2022
+ DEBUG Automobile.cpp:addFuel:34 The red 2012 Honda Civic is full of gas. Discarding the rest...
+
+Thu Aug 11 22:07:00 2022
+ DEBUG Automobile.cpp:addFuel:34 The blue 2008 Chevrolet Impala is full of gas. Discarding the rest...
+
+Thu Aug 11 22:07:01 2022
+ DEBUG Automobile.cpp:addFuel:34 The grey 2013 Toyota Corolla is full of gas. Discarding the rest...
+
+Thu Aug 11 22:07:01 2022
+ DEBUG Automobile.cpp:addFuel:34 The red 2012 Honda Civic is full of gas. Discarding the rest...
+
+Thu Aug 11 22:07:01 2022
+ DEBUG Automobile.cpp:addFuel:34 The blue 2008 Chevrolet Impala is full of gas. Discarding the rest...
+
+Thu Aug 11 22:07:01 2022
+ DEBUG Automobile.cpp:addFuel:34 The black 2016 Cadillac Escalade is full of gas. Discarding the rest...
+
+Thu Aug 11 22:07:02 2022
+ WARNING Automobile.cpp:drive:48 The black 2016 Cadillac Escalade has no gas left in the tank
+
+Thu Aug 11 22:07:02 2022
+ DEBUG Automobile.cpp:addFuel:34 The grey 2013 Toyota Corolla is full of gas. Discarding the rest...
+
+Thu Aug 11 22:07:02 2022
+ DEBUG Automobile.cpp:addFuel:34 The red 2012 Honda Civic is full of gas. Discarding the rest...
+
+Thu Aug 11 22:07:02 2022
+ DEBUG Automobile.cpp:addFuel:34 The blue 2008 Chevrolet Impala is full of gas. Discarding the rest...
+
+Thu Aug 11 22:07:03 2022
+ WARNING Automobile.cpp:drive:48 The blue 2008 Chevrolet Impala has no gas left in the tank
+
+Thu Aug 11 22:07:03 2022
+ WARNING Automobile.cpp:drive:48 The black 2016 Cadillac Escalade has no gas left in the tank
+
+Thu Aug 11 22:07:03 2022
+ DEBUG Automobile.cpp:addFuel:34 The grey 2013 Toyota Corolla is full of gas. Discarding the rest...
+
+Thu Aug 11 22:07:03 2022
+ DEBUG Automobile.cpp:addFuel:34 The red 2012 Honda Civic is full of gas. Discarding the rest...
+

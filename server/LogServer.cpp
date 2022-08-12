@@ -18,8 +18,8 @@
 
 using namespace std;
 
-const int PORT = 1153;
-const char IP_ADDR[] = "192.168.50.107";
+const int PORT = 1155;
+const char IP_ADDR[] = "127.0.0.1";
 const char logFile[] = "logFile.txt";
 const int BUF_LEN = 4096;
 char buf[BUF_LEN];
@@ -31,12 +31,16 @@ pthread_mutex_t lock_x;
 
 void *recvThread(void *arg);
 
+void dump_log();
+void shutdown();
+
 static void shutdownHandler(int sig) {
   switch (sig) {
   case SIGINT:
-    is_running = false;
+    shutdown();
+    exit(1);
     break;
-  case (2):
+  case (1):
     dump_log();
     break;
   case (0):
@@ -121,11 +125,11 @@ int main(void) {
         } while (numRead > 0);
         pthread_mutex_unlock(&lock_x);
         close(fdIn);
-        cout << endl << "Press any key to continue: ";
+        cout << endl << "Press any key + ENTER to continue: ";
         cin >> key;
         break;
       case 0:
-        is_running = false;
+        shutdown();
         break;
       }
     }
@@ -162,4 +166,23 @@ void *recvThread(void *arg) {
 
   cout << "pthread_exit" << endl;
   pthread_exit(NULL);
+}
+
+void dump_log() {
+  FILE *fp = fopen(logFile, "r");
+  if (fp == NULL) {
+    perror("Can't open file");
+    exit(EXIT_FAILURE);
+  }
+  char *line = NULL;
+  size_t len = 0;
+  while ((getline(&line, &len, fp)) != -1) {
+    cout << line << endl;
+  }
+  fclose(fp);
+}
+
+void shutdown() {
+  cout << "Shutting down..." << endl;
+  is_running = false;
 }

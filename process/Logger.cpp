@@ -1,33 +1,26 @@
-#pragma once
-
 #include "Logger.h"
 
-#include <arpa/inet.h>
 #include <iostream>
 #include <mutex>
 #include <thread>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include <string>
+#include <string.h>
 #include <unistd.h>
+#include <arpa/inet.h>
 #include <netinet/in.h>
 #include <sys/socket.h>
 #include <sys/types.h>
 
-#define BUF_LEN 256
-
-// Global variables
+// Global
 struct sockaddr_in server_addr;
-const int server_port = 4201;
+const int server_port = 1155;
+const int BUF_LEN = 4096;
 int sock_fd;
 char buffer[BUF_LEN];
 LOG_LEVEL global_log_level = ERROR;
 std::string server_ip = "127.0.0.1";
 socklen_t socket_len;
 int len;
-
-// Thread variables
 bool is_running = true;
 std::mutex logger_mutex;
 
@@ -38,8 +31,8 @@ void run_receiver(int fd);
 int InitializeLog() {
   if ((sock_fd = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) < 0) {
     perror("ERROR: Unable to create socket");
-    // exit(EXIT_FAILURE);
-    return -1;
+    exit(EXIT_FAILURE);
+    // return -1;
   }
 
   server_addr.sin_family = AF_INET;
